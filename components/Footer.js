@@ -4,8 +4,8 @@ export default function Footer() {
   const [currentYear, setCurrentYear] = useState('')
 
   useEffect(() => {
-    const year = new Date().getFullYear();
-    setCurrentYear(year.toString());
+    const year = new Date().getFullYear()
+    setCurrentYear(year.toString())
   }, [])
 
   return (

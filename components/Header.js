@@ -11,6 +11,7 @@ import Hamburger from './Hamburger.js'
 export default function Header() {
   const router = useRouter()
 
+  const [currentYear, setCurrentYear] = React.useState('')
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false)
 
   const toggleMobileNav = () => {
@@ -22,6 +23,11 @@ export default function Header() {
       return 'text-accent-500'
     }
   }
+
+  React.useEffect(() => {
+    const year = new Date().getFullYear()
+    setCurrentYear(year.toString())
+  }, [])
 
   const pageName = 'Klara Källström'
   const emailAddress = 'klarakallstrom@gmail.com'
@@ -220,7 +226,7 @@ export default function Header() {
           }
         </div>
         <div className='text-primary-500 tracking-wide text-center'>
-          <p className='text-s mb-2'>{`Copyright 2023 © ${pageName}`}</p>
+          <p className='text-s mb-2'>{`Copyright ${currentYear} © ${pageName}`}</p>
           <a href='mailto:' className='text-xs underline'>
             {emailAddress}
           </a>
