@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="w-full heroHeight centerContent text-4xl">
-        Home
+        Music
       </div>
     </Layout>
   )
