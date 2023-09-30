@@ -66,7 +66,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`w-full backdrop-blur flex justify-start fixed top-0 items-center z-10 bg-secondary-500 bg-opacity-100
+        className={`w-full backdrop-blur flex justify-start fixed top-0 items-center z-50 bg-secondary-500 bg-opacity-90
     `}
       >
         <div
@@ -145,7 +145,7 @@ export default function Header() {
 
       {/* MOBILE */}
 
-      <div className={`w-screen flex justify-start fixed items-center z-20 bg-secondary-500`}>
+      <div className={`w-screen flex justify-start fixed items-center z-50 bg-secondary-500`}>
         <div
           className={`
           lg:hidden

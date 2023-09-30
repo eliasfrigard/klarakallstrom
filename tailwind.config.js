@@ -17,10 +17,10 @@ module.exports = {
           500: '#F2F2F2',
         },
         secondary: {
-          500: '#28323c',
+          500: '#261A17',
         },
         accent: {
-          500: '#dea46f',
+          500: '#D9B29C',
         },
       },
       aspectRatio: {

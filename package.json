@@ -1,5 +1,5 @@
 {
-  "name": "Klara Källström",
+  "name": "klarakallstrom",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.5.3",
+    "moment": "^2.29.4",
     "next": "13.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "react-intersection-observer": "^9.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
