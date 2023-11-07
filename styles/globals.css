@@ -71,4 +71,11 @@ a {
   .mobileNavLink:hover {
     color: theme('colors.accent.500');
   }
+
+  .video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: 0.25rem;
+    box-shadow: theme('boxShadow.xl');
+  }
 }

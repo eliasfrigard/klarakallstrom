@@ -23,33 +23,20 @@ export async function getStaticProps() {
     content_type: 'galleryPage',
   })
 
-  const socialRes = await contentful.getEntries({
-    content_type: 'homePage',
-    select: 'fields.email, fields.facebook, fields.instagram, fields.spotify, fields.youTube',
-  })
-
   const page = pageRes.items[0].fields
-  const socialPage = socialRes?.items[0]?.fields
 
   return {
     props: {
       pageTitle: page.title,
       videos,
       images,
-      socialMedia: {
-        email: socialPage?.email || null,
-        facebook: socialPage?.facebook || null,
-        instagram: socialPage?.instagram || null,
-        spotify: socialPage?.spotify || null,
-        youTube: socialPage?.youTube || null,
-      }
     },
   }
 }
 
-const Gallery = ({ pageTitle, videos, images, socialMedia }) => {
+const Gallery = ({ pageTitle, videos, images }) => {
   return (
-    <Layout pageTitle={pageTitle} socialMedia={socialMedia}>
+    <Layout pageTitle={pageTitle}>
       <div className='-mt-[85px] pt-[85px] min-h-screen'>
         <div className='py-6 md:py-16 flex flex-col gap-6 md:gap-16'>
           <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-1 container px-2'>
