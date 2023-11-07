@@ -46,12 +46,16 @@ export default function Header() {
       label: 'home'
     },
     {
+      href: '/about',
+      label: 'about'
+    },
+    {
       href: '/music',
       label: 'music'
     },
     {
-      href: '/about',
-      label: 'about'
+      href: '/concerts',
+      label: 'concerts',
     },
     {
       href: '/gallery',
