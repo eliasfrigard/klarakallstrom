@@ -65,14 +65,8 @@ export default function Concerts({
           heroPosition='center'
           desktopImg={hero}
           mobileImg={mobileHero}
+          overlay={false}
         >
-          <div className='pt-[85px]'>
-            <AnimateIn animationType='slide' delay={1000}>
-              <h1 className='text-[2.6rem] md:text-8xl font-bold leading-none tracking-wider text-primary-100 opacity-60 uppercase font-khorla'>
-                concerts
-              </h1>
-            </AnimateIn>
-          </div>
         </Hero>
       )}
 

@@ -78,4 +78,15 @@ a {
     border-radius: 0.25rem;
     box-shadow: theme('boxShadow.xl');
   }
+
+  .roundedShadow {
+    border-radius: theme('borderRadius.lg');
+    box-shadow: theme('boxShadow.lg');
+  }
+
+  .borderGradient {
+    border-width: 1px 0;
+    border-style: solid;
+    border-image: linear-gradient(to right, transparent, rgba(38, 26, 23, 0.2), transparent) 1;
+  }
 }

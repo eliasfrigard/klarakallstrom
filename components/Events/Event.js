@@ -16,20 +16,33 @@ const Event = ({
 }) => {
   return (
     <>
-      <div className='hidden lg:grid w-full text-primary-200 grid-cols-3 lg:grid-cols-4 opacity-80 hover:opacity-100 duration-200 justify-items-center items-center py-8 border-b-2 border-primary-500 border-opacity-20'>
+      <div className={`hidden lg:grid w-full text-primary-200 grid-cols-3 lg:grid-cols-4 duration-200 justify-items-center items-center py-7 text-secondary-500 ${!last && 'border-y'} borderGradient border-opacity-20`}>
         <div className='centerContent flex-col gap-2 tracking-wider'>
           {
-            displayTime && (
-              <p className='text-2xl uppercase font-bold leading-none drop-shadow-sm'>
-                <Moment format='HH:mm'>{date}</Moment>
-              </p>
+            displayTime ? (
+              <>
+                <p className='text-2xl uppercase font-bold leading-none drop-shadow-sm'>
+                  <Moment format='HH:mm'>{date}</Moment>
+                </p>
+                <p className='text-base leading-none uppercase drop-shadow-sm'>
+                  <Moment format='D MMMM YYYY' className='font-bold'>
+                    {date}
+                  </Moment>
+                </p>
+              </>
+            ) : (
+              <>
+                <p className='uppercase font-bold leading-none drop-shadow-sm'>
+                  <Moment format='D MMMM'>{date}</Moment>
+                </p>
+                <p className='text-2xl leading-none uppercase drop-shadow-sm'>
+                  <Moment format='YYYY' className='font-bold'>
+                    {date}
+                  </Moment>
+                </p>
+              </>
             )
           }
-          <p className='text-base leading-none uppercase drop-shadow-sm'>
-            <Moment format='D MMMM YYYY' className='font-bold'>
-              {date}
-            </Moment>
-          </p>
         </div>
 
         <p className='font-bold text-lg text-center'>{title}</p>

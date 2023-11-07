@@ -1,7 +1,6 @@
 import Layout from "../components/layouts/Default"
 import Hero from "../components/Hero"
 import AnimateIn from "../components/Animate"
-import Calendar from "../components/Calendar"
 
 import { createClient } from 'contentful'
 
@@ -28,8 +27,6 @@ export default function Home({ pageTitle, hero, mobileHero }) {
           </AnimateIn>
         </div>
       </Hero>
-
-      <Calendar />
     </Layout>
   )
 }
