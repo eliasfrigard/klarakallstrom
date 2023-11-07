@@ -1,4 +1,4 @@
-import Layout from '../components/Layouts/Default'
+import Layout from '../components/layouts/Default'
 import Events from '../components/Events'
 import AnimateIn from '../components/AnimateIn'
 import Hero from '../components/Hero'
