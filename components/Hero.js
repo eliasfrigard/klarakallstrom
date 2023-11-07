@@ -1,31 +1,39 @@
-import Image from "next/image"
+import Image from 'next/image'
 
-import AnimateIn from "../components/Animate"
+import AnimateIn from '../components/AnimateIn'
 
-export default function Hero({ children, desktopImg, mobileImg, altText, heroPosition }) {
+const Hero = ({ children, className, desktopImg, mobileImg, altText, overlay = true }) => {
   return (
-    <AnimateIn>
-      <div id='hero' className='relative h-screen -mt-[75px] flex justify-center items-center shadow-xl'>
+    <AnimateIn className={className}>
+      <div id='hero' className='relative h-screen w-screen -mt-[75px] flex justify-center items-center shadow-lg'>
         <Image
           alt={altText}
-          src={desktopImg}
+          src={desktopImg || mobileImg}
           fill
-          className={`hidden lg:block object-cover object-${heroPosition}`}
-        />
-        <Image
-          alt={altText}
-          src={mobileImg}
-          fill
-          className='lg:hidden object-cover object-bottom'
+          className={`hidden md:block object-cover`}
         />
 
-        <AnimateIn delay={2000} classes="absolute w-full h-screen bg-secondary-500 bg-opacity-70 backdrop-blur delay-[1000ms]"></AnimateIn>
+        {mobileImg &&
+          (
+            <Image
+              alt={altText}
+              src={mobileImg || desktopImg}
+              fill
+              className='md:hidden object-cover object-bottom'
+            />
+          )
+        }
 
-        <div className="w-full heroHeight mt-[75px] z-10 centerContent">
-          {children}
-        </div>
+        {overlay && (
+          <AnimateIn
+            className='delay-[1500ms] absolute w-full h-screen bg-primary-950 bg-opacity-70 backdrop-blur-sm'
+          ></AnimateIn>
+        )}
+
+        <div className='z-10 mt-85 centerContent'>{children}</div>
       </div>
-
     </AnimateIn>
   )
 }
+
+export default Hero

@@ -2,18 +2,23 @@ import '../styles/globals.css'
 
 import Script from 'next/script'
 
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Libre_Baskerville } from 'next/font/google'
 
 const mont = Montserrat({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
-  style: ['normal', 'italic'],
   variable: '--font-mont',
+})
+
+const basker = Libre_Baskerville({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-quattro',
 })
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div id='__next' className={`${mont.className} font-mont`}>
+    <div id='__next' className={` ${mont.variable} ${basker.variable}`}>
       <Script src='/static/script.js' />
       <Component {...pageProps} />
     </div>

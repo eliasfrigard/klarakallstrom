@@ -66,7 +66,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`w-full backdrop-blur flex justify-start fixed top-0 items-center z-50 bg-secondary-500 bg-opacity-90
+        className={`w-full backdrop-blur flex justify-start fixed top-0 items-center z-50 bg-[#260F0D] bg-opacity-90
     `}
       >
         <div
