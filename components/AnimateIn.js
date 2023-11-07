@@ -10,6 +10,7 @@ const AnimateIn = ({
   slideDirection = 'left',
   disabled = false,
   delay = 0,
+  ...rest
 }) => {
   const [ref, inView] = useInView({ threshold, triggerOnce })
 
@@ -50,7 +51,7 @@ const AnimateIn = ({
   }
 
   return (
-    <div className={getAnimationClasses()} ref={ref}>
+    <div {...rest} className={getAnimationClasses()} ref={ref}>
       {children}
     </div>
   )

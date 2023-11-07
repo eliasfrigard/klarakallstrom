@@ -1,6 +1,9 @@
-import Layout from '../components/Layouts/Default'
+import { useState, useEffect, useCallback } from 'react'
+
+import Layout from '../components/layouts/Default'
 import Video from '../components/Video'
 import ImageLayout from '../components/ImageLayout'
+import ImageModal from '../components/ImageModal'
 
 import { createClient } from 'contentful'
 
@@ -35,6 +38,55 @@ export async function getStaticProps() {
 }
 
 const Gallery = ({ pageTitle, videos, images }) => {
+
+  const [selectedImage, setSelectedImage] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const handleOpenModal = (index) => {
+    setCurrentIndex(index)
+    setModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setModalOpen(false)
+  }
+
+  const previousImage = useCallback(() => {
+    setCurrentIndex((prev) => {
+      if (prev > 0) return prev - 1
+      return prev
+    })
+  }, [])
+
+  const nextImage = useCallback(() => {
+    setCurrentIndex((prev) => {
+      if (prev + 1 < images.length) return prev + 1
+      return prev
+    })
+  }, [images])
+
+  useEffect(() => {
+    setSelectedImage('https:' + images[currentIndex].url)
+  }, [currentIndex, images])
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        previousImage()
+      } else if (e.key === 'ArrowRight') {
+        nextImage()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [previousImage, nextImage])
+
   return (
     <Layout pageTitle={pageTitle}>
       <div className='-mt-[85px] pt-[85px] min-h-screen'>
@@ -55,12 +107,16 @@ const Gallery = ({ pageTitle, videos, images }) => {
           <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-1 container px-2'>
             {
               images.map((image, index) => (
-                <ImageLayout key={image} index={index} image={'https:' + image.url} />
+                <ImageLayout handleOnClick={() => handleOpenModal(index)} key={image} index={index} image={'https:' + image.url} />
               ))
             }
           </div>
         </div>
       </div>
+
+      {modalOpen && (
+        <ImageModal isOpen={modalOpen} handleClose={handleCloseModal} handleNext={nextImage} handlePrev={previousImage} image={selectedImage} isLast={currentIndex + 1 === images.length} isFirst={currentIndex === 0} />
+      )}
     </Layout>
   )
 }

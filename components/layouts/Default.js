@@ -11,7 +11,8 @@ export default function Layout({
   pageTitle,
   pageDescription,
   imageUrl,
-  pageUrl
+  pageUrl,
+  footer = true,
 }) {
   const router = useRouter()
 
@@ -62,7 +63,9 @@ export default function Layout({
       >
         {children}
       </main>
-      <Footer />
+      {
+        footer && <Footer />
+      }
     </>
   )
 }

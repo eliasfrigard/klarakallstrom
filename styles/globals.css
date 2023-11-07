@@ -80,7 +80,7 @@ a {
   }
 
   .roundedShadow {
-    border-radius: theme('borderRadius.lg');
+    border-radius: theme('borderRadius.md');
     box-shadow: theme('boxShadow.lg');
   }
 
