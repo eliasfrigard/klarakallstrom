@@ -38,8 +38,7 @@ export async function getStaticProps() {
 }
 
 const Gallery = ({ pageTitle, videos, images }) => {
-
-  const [selectedImage, setSelectedImage] = useState('')
+  const [selectedImage, setSelectedImage] = useState(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -67,7 +66,7 @@ const Gallery = ({ pageTitle, videos, images }) => {
   }, [images])
 
   useEffect(() => {
-    setSelectedImage('https:' + images[currentIndex].url)
+    setSelectedImage(images[currentIndex])
   }, [currentIndex, images])
 
   useEffect(() => {
