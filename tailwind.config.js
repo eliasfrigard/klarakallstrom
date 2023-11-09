@@ -14,6 +14,7 @@ module.exports = {
         heading: ['var(--font-josefin)', 'sans'],
         body: ['var(--font-open)', 'sans'],
         josefin: ['var(--font-josefin)'],
+        cursive: ['var(--font-cursive)'],
         open: ['var(--font-open)']
       },
       colors: {

@@ -20,16 +20,27 @@ export default function Home({ pageTitle, pageSlogan, hero, mobileHero, youTubeL
         desktopImg={hero}
         heroPosition="top"
       >
-        <div className="centerContent flex-col gap-4 text-white tracking-widest drop-shadow-lg font-josefin">
-          <AnimateIn animationType="slide" classes="delay-[1500ms]">
-            <h1 className="lg:text-8xl font-bold tracking-wider">KLARA</h1>
-          </AnimateIn>
-          <AnimateIn animationType="slide" slideDirection="right" classes="delay-[1500ms]">
-            <h1 className="lg:text-8xl font-bold tracking-wider">KÄLLSTRÖM</h1>
+        <div className="centerContent flex-col gap-4 text-white tracking-widest font-cursive">
+          <AnimateIn animationType="slide" slideDirection="top" classes="delay-[1500ms]">
+            <h1 className="lg:text-9xl tracking-wider">Klara Källström</h1>
           </AnimateIn>
 
-          <AnimateIn animationType="slide" slideDirection="bottom" classes="delay-[1500ms]">
-            <h2 className="lg:text-2xl tracking-widest font-open">{pageSlogan}</h2>
+          <div className="flex">
+            <AnimateIn classes="px-8 flex items-end delay-[1500ms]" animationType="slide" slideDirection="left">
+              <h2 className="lg:text-4xl font-bold leading-none tracking-widest font-josefin">C</h2>
+              <h2 className="lg:text-3xl leading-none tracking-widest font-josefin mb-[1px]">ellist</h2>
+            </AnimateIn>
+            <AnimateIn classes="px-8 border-x border-opacity-20 flex items-end delay-[1500ms]" animationType="slide" slideDirection="bottom">
+              <h2 className="lg:text-4xl font-bold leading-none tracking-widest font-josefin">A</h2>
+              <h2 className="lg:text-3xl leading-none tracking-widest font-josefin mb-[1px]">rtist</h2>
+            </AnimateIn>
+            <AnimateIn classes="px-8 flex items-end delay-[1500ms]" animationType="slide" slideDirection="right">
+              <h2 className="lg:text-4xl font-bold leading-none tracking-widest font-josefin">C</h2>
+              <h2 className="lg:text-3xl leading-none tracking-widest font-josefin mb-[1px]">omposer</h2>
+            </AnimateIn>
+          </div>
+
+          <AnimateIn animationType="slide" slideDirection="bottom" classes="delay-[1500ms] flex gap-6">
           </AnimateIn>
         </div>
       </Hero>

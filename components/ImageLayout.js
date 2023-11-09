@@ -8,7 +8,7 @@ const Hero = ({ image, index, handleOnClick }) => {
         <Image alt={image} src={image + '?w=1000&h=1000'} fill className={`object-cover object-center rounded shadow`} />
 
         {/* IMAGE OVERLAY */}
-        <div className='absolute bg-primary-500 w-full h-full z-10 opacity-20 hover:opacity-0 duration-300 grayscale'></div>
+        <div className='absolute bg-secondary-500 w-full h-full z-10 opacity-20 hover:opacity-0 duration-300 grayscale'></div>
       </AnimateIn >
     </>
   )

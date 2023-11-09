@@ -78,8 +78,7 @@ export default function Header() {
           hidden
           lg:gap-16
           lg:flex
-          xl:grid
-          xl:grid-cols-3
+          justify-between
           items-center
           h-[75px]
           w-full
@@ -91,8 +90,8 @@ export default function Header() {
         `}
         >
           <div id='left'>
-            <Link className='cursor-pointer text-lg font-bold font-josefin tracking-widest uppercase' href='/'>
-              {pageName}
+            <Link className='cursor-pointer text-2xl font-cursive tracking-widest' href='/'>
+              Klara Källström
             </Link>
           </div>
           <div id='center' className='flex text-sm gap-4 font-medium justify-center tracking-widest'>
