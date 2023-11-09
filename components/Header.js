@@ -95,7 +95,7 @@ export default function Header() {
               {pageName}
             </Link>
           </div>
-          <div id='center' className='flex gap-4 font-medium justify-center tracking-[2px]'>
+          <div id='center' className='flex text-sm gap-4 font-medium justify-center tracking-[2px]'>
             {
               links.map((link) => (
                 <Link key={link.href} href={link.href} className={`${activeLinkStyling(link.href)} desktopNavLink uppercase`}>
@@ -108,7 +108,7 @@ export default function Header() {
             {
               socialMedia.email && (
                 <a href={socialMedia.email}>
-                  <AiOutlineMail className='soMeIcon text-[1.5rem] antialiased' />
+                  <AiOutlineMail className='soMeIcon text-[1.4rem] antialiased' />
                 </a>
               )
 
@@ -116,14 +116,14 @@ export default function Header() {
             {
               socialMedia.facebook && (
                 <a href={socialMedia.facebook} target='_blank' rel='noopener noreferrer'>
-                  <BsFacebook className='soMeIcon text-xl' />
+                  <BsFacebook className='soMeIcon text-lg' />
                 </a>
               )
             }
             {
               socialMedia.instagram && (
                 <a href={socialMedia.instagram} target='_blank' rel='noopener noreferrer'>
-                  <BsInstagram className='soMeIcon text-xl' />
+                  <BsInstagram className='soMeIcon text-lg' />
                 </a>
               )
             }
@@ -132,14 +132,14 @@ export default function Header() {
                 <a
                   href={socialMedia.spotify} target='_blank' rel='noopener noreferrer'
                 >
-                  <BsSpotify className='soMeIcon text-xl' />
+                  <BsSpotify className='soMeIcon text-lg' />
                 </a>
               )
             }
             {
               socialMedia.youtube && (
                 <a href={socialMedia.youtube} target='_blank' rel='noopener noreferrer'>
-                  <BsYoutube className='soMeIcon text-[1.5rem] translate-y-[1px]' />
+                  <BsYoutube className='soMeIcon text-[1.4rem] translate-y-[1px]' />
                 </a>
               )
             }
