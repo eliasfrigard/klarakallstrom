@@ -91,11 +91,11 @@ export default function Header() {
         `}
         >
           <div id='left'>
-            <Link className='cursor-pointer text-lg font-bold tracking-wider uppercase' href='/'>
+            <Link className='cursor-pointer text-lg font-bold font-josefin tracking-widest uppercase' href='/'>
               {pageName}
             </Link>
           </div>
-          <div id='center' className='flex text-sm gap-4 font-medium justify-center tracking-[2px]'>
+          <div id='center' className='flex text-sm gap-4 font-medium justify-center tracking-widest'>
             {
               links.map((link) => (
                 <Link key={link.href} href={link.href} className={`${activeLinkStyling(link.href)} desktopNavLink uppercase`}>

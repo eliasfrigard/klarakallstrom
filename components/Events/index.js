@@ -39,7 +39,7 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
     <div className='centerContent flex-col container relative w-full p-6 bg-primary-950 rounded shadow-lg'>
       {
         bandName ? (
-          <div className='text-center font-khorla text-primary-100 tracking-wider leading-relaxed py-1'>
+          <div className='text-center text-primary-100 tracking-wider leading-relaxed py-1'>
             <p className='text-xl pb-1'>
               {bandName} has no upcoming concerts at this moment
             </p>

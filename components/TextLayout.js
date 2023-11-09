@@ -54,7 +54,7 @@ const TextLayout = ({
 
   if (textLength < maxLengthForTwoColumns || type === 'single') {
     return (
-      <div className={`prose max-w-4xl prose-img:roundedShadow prose-img:shadow-md leading-loose tracking-wider font-sans font-medium text-center prose-headings:font-khorla prose-blockquote:border-primary-500 prose-blockquote:border-opacity-10 prose-blockquote:opacity-80 prose-blockquote:rounded prose-a:text-accent-500 flex flex-col items-center justify-center prose-blockquote:my-0 ${className}`}>
+      <div className={`prose max-w-4xl prose-img:roundedShadow prose-img:shadow-md leading-loose tracking-wider font-open font-medium text-center prose-headings:font-josefin prose-blockquote:border-primary-500 prose-blockquote:border-opacity-10 prose-blockquote:opacity-80 prose-blockquote:rounded prose-a:text-accent-500 flex flex-col items-center justify-center prose-blockquote:my-0 ${className}`}>
         {documentToReactComponents(textDocument, options)}
       </div>
     )

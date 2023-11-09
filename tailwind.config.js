@@ -10,6 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['var(--font-josefin)', 'sans'],
+        body: ['var(--font-open)', 'sans'],
+        josefin: ['var(--font-josefin)'],
+        open: ['var(--font-open)']
+      },
       colors: {
         white: '#F2F2F2',
         black: '#000000',

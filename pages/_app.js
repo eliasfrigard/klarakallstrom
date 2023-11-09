@@ -1,24 +1,21 @@
 import '../styles/globals.css'
 
 import Script from 'next/script'
+import { Open_Sans, Josefin_Sans } from 'next/font/google'
 
-import { Montserrat, Libre_Baskerville } from 'next/font/google'
-
-const mont = Montserrat({
+const open = Open_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-mont',
+  variable: '--font-open',
 })
 
-const basker = Libre_Baskerville({
+const josefin = Josefin_Sans({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-quattro',
+  variable: '--font-josefin',
 })
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div id='__next' className={` ${mont.variable} ${basker.variable}`}>
+    <div id='__next' className={`${open.variable} ${josefin.variable} font-open`}>
       <Script src='/static/script.js' />
       <Component {...pageProps} />
     </div>

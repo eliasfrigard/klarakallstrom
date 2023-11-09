@@ -20,16 +20,16 @@ export default function Home({ pageTitle, pageSlogan, hero, mobileHero, youTubeL
         desktopImg={hero}
         heroPosition="top"
       >
-        <div className="centerContent flex-col gap-4 text-white tracking-widest drop-shadow-lg">
+        <div className="centerContent flex-col gap-4 text-white tracking-widest drop-shadow-lg font-josefin">
           <AnimateIn animationType="slide" classes="delay-[1500ms]">
-            <h1 className="lg:text-7xl font-bold tracking-wider font-basker">KLARA</h1>
+            <h1 className="lg:text-8xl font-bold tracking-wider">KLARA</h1>
           </AnimateIn>
           <AnimateIn animationType="slide" slideDirection="right" classes="delay-[1500ms]">
-            <h1 className="lg:text-7xl font-bold tracking-wider">KÄLLSTRÖM</h1>
+            <h1 className="lg:text-8xl font-bold tracking-wider">KÄLLSTRÖM</h1>
           </AnimateIn>
 
-          <AnimateIn animationType="slide" slideDirection="right" classes="delay-[1500ms]">
-            <h2 className="lg:text-2xl font-medium tracking-wider">{pageSlogan}</h2>
+          <AnimateIn animationType="slide" slideDirection="bottom" classes="delay-[1500ms]">
+            <h2 className="lg:text-2xl tracking-widest font-open">{pageSlogan}</h2>
           </AnimateIn>
         </div>
       </Hero>
