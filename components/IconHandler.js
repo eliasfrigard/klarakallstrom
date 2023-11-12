@@ -58,7 +58,7 @@ const IconHandler = ({
           rel='noopener noreferrer'
           className='duration-200 hover:text-accent-500'
         >
-          abc
+          {children}
         </a>
       </Tooltip>
     )
