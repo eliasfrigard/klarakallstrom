@@ -52,10 +52,10 @@ const IconHandler = ({
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
       <a
-        href='https://google.se'
+        href={href}
         target='_blank'
         rel='noopener noreferrer'
-        className='duration-200 hover:text-primary-500'
+        className='duration-200'
       >
         {children}
       </a>
