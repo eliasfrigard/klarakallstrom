@@ -45,12 +45,11 @@ const Contact = ({ hero, mobileHero, pageTitle }) => {
       >
         <div className='relative w-full h-full z-10'>
           <AnimateIn
-            delay={1000}
-            className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest font-medium gap-2 md:gap-3 text-center px-4'
+            className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest gap-2 md:gap-3 text-center px-4 delay-[1500ms]'
           >
-            <p className='text-5xl md:text-8xl leading-tight font-light font-cursive'>Klara Källström</p>
-            <p className=' md:text-xl'>klaralovisa.kallstrom@gmail.com</p>
-            <p className=' md:text-xl'>+46(0)70-1234567</p>
+            <p className='text-4xl md:text-8xl  tracking-wider font-cursive'>Klara Källström</p>
+            <p className=' md:text-lg'>klaralovisa.kallstrom@gmail.com</p>
+            <p className=' md:text-lg'>+46(0)70-1234567</p>
           </AnimateIn>
         </div>
       </Hero>
