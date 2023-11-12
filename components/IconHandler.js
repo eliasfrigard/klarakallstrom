@@ -82,20 +82,6 @@ const IconHandler = ({
           </LinkIcon>
         )
       }
-      {
-        website && (
-          <LinkIcon href={website} tooltip='Website'>
-            <BsGlobeEuropeAfrica className='soMeIcon' />
-          </LinkIcon>
-        )
-      }
-      {
-        tickets && (
-          <LinkIcon href={tickets} tooltip='Tickets'>
-            <BsTicketPerforated className='soMeIcon' />
-          </LinkIcon>
-        )
-      }
     </div>
   )
 }
