@@ -75,7 +75,7 @@ export default function Concerts({
         </Hero>
       )}
 
-      {/* <Events concerts={concerts} email='klaralovisa.kallstrom@gmail.com' /> */}
+      <Events concerts={concerts} email='klaralovisa.kallstrom@gmail.com' />
     </Layout>
   )
 }
