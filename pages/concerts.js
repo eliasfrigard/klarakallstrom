@@ -53,12 +53,11 @@ export default function Concerts({
   hero,
   mobileHero,
   concerts,
-  pageDescription,
 }) {
   return (
     <Layout
       pageTitle='Concerts'
-      pageDescription={pageDescription}
+      imageUrl={hero}
       pageUrl='/concerts'
     >
       {hero && (
