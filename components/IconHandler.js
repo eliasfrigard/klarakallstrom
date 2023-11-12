@@ -37,7 +37,7 @@ const IconHandler = ({
   }, [email, websiteName])
 
   React.useEffect(() => {
-    if (
+    setNoIcons(prev => (
       !email
       && !facebook
       && !instagram
@@ -47,12 +47,8 @@ const IconHandler = ({
       && !tickets
       && !address
       && !websiteName
-    ) {
-      setNoIcons(true)
-    } else {
-      setNoIcons(false)
-    }
-  }, [email, facebook, instagram, spotify, youTube, website, tickets, address, websiteName, setNoIcons])
+    ));
+  }, [email, facebook, instagram, spotify, youTube, website, tickets, address, websiteName])
 
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
