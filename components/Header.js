@@ -30,14 +30,14 @@ export default function Header() {
   }, [])
 
   const pageName = 'Klara Källström'
-  const emailAddress = 'klarakallstrom@gmail.com'
+  const emailAddress = 'klaralovisa.kallstrom@gmail.com'
 
   const socialMedia = {
     email: `mailto:${emailAddress}?subject=${pageName} Website`,
-    facebook: 'https://www.facebook.com/Polentamusic',
-    instagram: 'https://www.instagram.com/polentamusic/',
-    spotify: 'https://open.spotify.com/artist/6LCSzEXMsFKhWkOAp1wP4E?si=SunHecGiSISfPt1Zmv2W3A',
-    youtube: 'https://www.youtube.com/@polentamusic650'
+    facebook: '',
+    instagram: 'https://www.instagram.com/klara.lovisa.kallstrom',
+    spotify: 'https://open.spotify.com/artist/2BO68kQDAyOLWpxAR1JQUV?si=3u0fwt9oSu-FpLsZgrkAFg',
+    youtube: 'https://www.youtube.com/@klarakallstrom6799'
   }
 
   const links = [
@@ -192,7 +192,7 @@ export default function Header() {
           {
             socialMedia.email && (
               <a href={socialMedia.email}>
-                <AiOutlineMail className='soMeIcon text-[1.6rem] antialiased' />
+                <AiOutlineMail className='soMeIcon text-[1.5rem] antialiased' />
               </a>
             )
 
@@ -200,14 +200,14 @@ export default function Header() {
           {
             socialMedia.facebook && (
               <a href={socialMedia.facebook} target='_blank' rel='noopener noreferrer'>
-                <BsFacebook className='soMeIcon text-2xl' />
+                <BsFacebook className='soMeIcon text-xl' />
               </a>
             )
           }
           {
             socialMedia.instagram && (
               <a href={socialMedia.instagram} target='_blank' rel='noopener noreferrer'>
-                <BsInstagram className='soMeIcon text-2xl' />
+                <BsInstagram className='soMeIcon text-xl' />
               </a>
             )
           }
@@ -216,21 +216,21 @@ export default function Header() {
               <a
                 href={socialMedia.spotify} target='_blank' rel='noopener noreferrer'
               >
-                <BsSpotify className='soMeIcon text-2xl' />
+                <BsSpotify className='soMeIcon text-xl' />
               </a>
             )
           }
           {
             socialMedia.youtube && (
               <a href={socialMedia.youtube} target='_blank' rel='noopener noreferrer'>
-                <BsYoutube className='soMeIcon text-[1.8rem] translate-y-[1px]' />
+                <BsYoutube className='soMeIcon text-[1.6rem] translate-y-[1px]' />
               </a>
             )
           }
         </div>
         <div className='text-primary-500 tracking-wide text-center'>
-          <p className='text-s mb-2'>{`Copyright ${currentYear} © ${pageName}`}</p>
-          <a href='mailto:' className='text-xs underline'>
+          <p className='text-sm mb-2'>{`Copyright ${currentYear} © ${pageName}`}</p>
+          <a href='mailto:' className='tracking-wider text-xl font-cursive'>
             {emailAddress}
           </a>
         </div>

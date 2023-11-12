@@ -66,7 +66,7 @@ export default function Concerts({
           desktopImg={hero}
           mobileImg={mobileHero}
         >
-          <AnimateIn classes="centerContent flex-col text-primary-500 tracking-widest font-cursive delay-[1500ms]">
+          <AnimateIn classes="centerContent flex-col text-primary-500 tracking-widest font-cursive delay-[1000ms]">
             <h1 className="text-6xl lg:text-9xl tracking-wider drop-shadow-sm">Concerts</h1>
           </AnimateIn>
         </Hero>
