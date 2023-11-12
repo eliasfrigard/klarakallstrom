@@ -17,7 +17,7 @@ const IconHandler = ({
 }) => {
   const [mailLink, setMailLink] = React.useState(null)
   const [addressLink, setAddressLink] = React.useState(null)
-  // const [noIcons, setNoIcons] = React.useState(false)
+  const [noIcons, setNoIcons] = React.useState(false)
 
   React.useEffect(() => {
     if (!address) {
@@ -31,27 +31,27 @@ const IconHandler = ({
     if (!email) {
       setMailLink(null)
     } else {
-      setMailLink(`mailto:${email}??subject=${websiteName} Website`)
+      setMailLink(`mailto:${email}?subject=${websiteName} Website`)
     }
   }, [email, websiteName])
 
-  // React.useEffect(() => {
-  //   setNoIcons(prev => (
-  //     !email
-  //     && !facebook
-  //     && !instagram
-  //     && !spotify
-  //     && !youTube
-  //     && !website
-  //     && !tickets
-  //     && !address
-  //     && !websiteName
-  //   ));
-  // }, [email, facebook, instagram, spotify, youTube, website, tickets, address, websiteName])
+  React.useEffect(() => {
+    setNoIcons(prev => (
+      !email
+      && !facebook
+      && !instagram
+      && !spotify
+      && !youTube
+      && !website
+      && !tickets
+      && !address
+      && !websiteName
+    ));
+  }, [email, facebook, instagram, spotify, youTube, website, tickets, address, websiteName])
 
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
-      <Tooltip content={tooltip} className='bg-primary-950 border border-primary-100 font-khorla tracking-wider px-3 py-2'>
+      <Tooltip content={tooltip} className='bg-primary-950 border border-primary-100 font-open tracking-wider px-3 py-2'>
         <a
           href={href}
           target='_blank'
@@ -64,7 +64,7 @@ const IconHandler = ({
     )
   }
 
-  // if (noIcons) return ''
+  if (noIcons) return ''
 
   return (
     <div className={`flex text-2xl justify-center items-center gap-5 z-10 ${className}`}>
