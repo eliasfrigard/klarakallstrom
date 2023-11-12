@@ -32,7 +32,9 @@ export async function getStaticProps() {
   const page = pageRes.items[0].fields
 
   const hero = page?.hero ? 'https:' + page?.hero?.fields?.file?.url : null
-  const mobileHero = page?.mobileHero ? 'https:' + page?.mobileHero?.fields?.file?.url : null
+  const mobileHero = page?.mobileHero
+    ? 'https:' + page?.mobileHero?.fields?.file?.url
+    : null
 
   return {
     props: {
@@ -40,8 +42,8 @@ export async function getStaticProps() {
       mobileHero,
       pageTitle: page?.title,
       concerts: {
-        upcoming: upcomingConcertsRes?.items || concerts.upcoming,
-        previous: previousConcertsRes?.items || concerts.previous,
+        upcoming: upcomingConcertsRes?.items || [],
+        previous: previousConcertsRes?.items || [],
       },
     },
   }
