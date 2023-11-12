@@ -13,16 +13,12 @@ const Hero = ({ children, className, desktopImg, mobileImg, altText, overlay = t
           className={`${mobileImg && 'hidden md:block'} object-cover`}
         />
 
-        {mobileImg &&
-          (
-            <Image
-              alt={altText}
-              src={mobileImg || desktopImg}
-              fill
-              className='md:hidden object-cover object-bottom'
-            />
-          )
-        }
+        <Image
+          alt={altText}
+          src={mobileImg || desktopImg}
+          fill
+          className='md:hidden object-cover object-bottom'
+        />
 
         {overlay && (
           <AnimateIn
