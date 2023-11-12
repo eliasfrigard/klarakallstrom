@@ -3,6 +3,7 @@
 import React from 'react';
 import Event from './Event';
 import Title from '../Title';
+import AnimateIn from '../Animate';
 
 const Events = ({ concerts, bandName, email, className, noPadding }) => {
   const mapBandProps = (bands) => {
@@ -16,19 +17,20 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
 
   const upcomingConcerts = concerts?.upcoming?.map((c, index) => {
     return (
-      <Event
-        key={c.sys.id}
-        title={c.fields.title}
-        date={c.fields.dateTime}
-        displayTime={c.fields.displayTime}
-        cityCountry={c.fields.cityCountry}
-        address={c.fields.address}
-        website={c.fields.website}
-        facebook={c.fields.facebook}
-        tickets={c.fields.tickets}
-        first={index === 0}
-        last={index + 1 === concerts.upcoming.length}
-      />
+      <AnimateIn key={c.sys.id} animationType='slide'>
+        <Event
+          title={c.fields.title}
+          date={c.fields.dateTime}
+          displayTime={c.fields.displayTime}
+          cityCountry={c.fields.cityCountry}
+          address={c.fields.address}
+          website={c.fields.website}
+          facebook={c.fields.facebook}
+          tickets={c.fields.tickets}
+          first={index === 0}
+          last={index + 1 === concerts.upcoming.length}
+        />
+      </AnimateIn>
     )
   })
 
@@ -66,20 +68,22 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
     const bands = mapBandProps(c?.fields?.band)
 
     return (
-      <Event
-        key={c.sys.id}
-        title={c.fields.title}
-        date={c.fields.dateTime}
-        displayTime={c.fields.displayTime}
-        cityCountry={c.fields.cityCountry}
-        address={c.fields.address}
-        bands={bands}
-        website={c.fields.website}
-        facebook={c.fields.facebook}
-        tickets={c.fields.tickets}
-        first={index === 0}
-        last={index + 1 === concerts.previous.length}
-      />
+      <AnimateIn key={c.sys.id} animationType='slide'>
+        <Event
+          key={c.sys.id}
+          title={c.fields.title}
+          date={c.fields.dateTime}
+          displayTime={c.fields.displayTime}
+          cityCountry={c.fields.cityCountry}
+          address={c.fields.address}
+          bands={bands}
+          website={c.fields.website}
+          facebook={c.fields.facebook}
+          tickets={c.fields.tickets}
+          first={index === 0}
+          last={index + 1 === concerts.previous.length}
+        />
+      </AnimateIn>
     )
   })
 
