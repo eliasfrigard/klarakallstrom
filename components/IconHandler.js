@@ -1,5 +1,4 @@
 import React from 'react'
-import Avatar from './Avatar'
 
 import { Tooltip } from "@material-tailwind/react"
 import { BsFacebook, BsGlobeEuropeAfrica, BsInstagram, BsYoutube, BsSpotify, BsMailbox, BsPinMapFill, BsTicketPerforated } from 'react-icons/bs'
@@ -36,18 +35,19 @@ const IconHandler = ({
     }
   }, [email, websiteName])
 
-  // React.useEffect(() => {
-  //   setNoIcons(prev => (
-  //     && !facebook
-  //     && !instagram
-  //     && !spotify
-  //     && !youTube
-  //     && !website
-  //     && !tickets
-  //     && !address
-  //     && !websiteName
-  //   ));
-  // }, [email, facebook, instagram, spotify, youTube, website, tickets, address, websiteName])
+  React.useEffect(() => {
+    setNoIcons(prev => (
+      !email
+      && !facebook
+      && !instagram
+      && !spotify
+      && !youTube
+      && !website
+      && !tickets
+      && !address
+      && !websiteName
+    ));
+  }, [email, facebook, instagram, spotify, youTube, website, tickets, address, websiteName])
 
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
@@ -64,7 +64,7 @@ const IconHandler = ({
     )
   }
 
-  // if (noIcons) return ''
+  if (noIcons) return ''
 
   return (
     <div className={`flex text-2xl justify-center items-center gap-5 z-10 ${className}`}>
