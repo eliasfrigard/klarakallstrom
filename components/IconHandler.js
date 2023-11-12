@@ -51,7 +51,16 @@ const IconHandler = ({
 
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
-      <div></div>
+      <Tooltip className='bg-primary-950 border border-primary-100 font-open tracking-wider px-3 py-2'>
+        <a
+          href={href}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='duration-200 hover:text-accent-500'
+        >
+          {children}
+        </a>
+      </Tooltip>
     )
   }
 
