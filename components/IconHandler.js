@@ -68,7 +68,7 @@ const IconHandler = ({
 
   return (
     <div className={`flex text-2xl justify-center items-center gap-5 z-10 ${className}`}>
-      {/* {
+      {
         address && (
           <LinkIcon href={addressLink} tooltip='Google Maps'>
             <BsPinMapFill className='soMeIcon' />
@@ -96,34 +96,6 @@ const IconHandler = ({
           </LinkIcon>
         )
       }
-      {
-        facebook && (
-          <LinkIcon href={facebook} tooltip='Facebook'>
-            <BsFacebook className='soMeIcon' />
-          </LinkIcon>
-        )
-      }
-      {
-        instagram && (
-          <LinkIcon href={instagram} tooltip='Instagram'>
-            <BsInstagram className='soMeIcon' />
-          </LinkIcon>
-        )
-      }
-      {
-        spotify && (
-          <LinkIcon href={spotify} tooltip='Spotify'>
-            <BsSpotify className='soMeIcon' />
-          </LinkIcon>
-        )
-      }
-      {
-        youTube && (
-          <LinkIcon href={youTube} tooltip='YouTube'>
-            <BsYoutube className='soMeIcon' />
-          </LinkIcon>
-        )
-      } */}
     </div>
   )
 }
