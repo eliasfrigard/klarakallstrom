@@ -56,7 +56,7 @@ const About = ({
             </div>
           )
         }
-        <div className='container centerContent flex-col gap-8 md:gap-16 px-6 py-8 lg:px-0 md:py-16'>
+        <div className='container centerContent flex-col md:gap-16 px-6 py-8 lg:px-0 md:py-16'>
           {
             hero && (
               <AnimateIn className='relative w-full aspect-[9/16] md:aspect-video hidden md:block'>
