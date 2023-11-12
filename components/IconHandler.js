@@ -51,7 +51,7 @@ const IconHandler = ({
 
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
-      <Tooltip className='bg-primary-950 border border-primary-100 font-open tracking-wider px-3 py-2'>
+      <Tooltip content={tooltip} className='bg-primary-950 border border-primary-100 font-open tracking-wider px-3 py-2'>
         <a
           href='https://google.se'
           target='_blank'
