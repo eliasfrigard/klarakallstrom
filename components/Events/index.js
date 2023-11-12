@@ -36,7 +36,7 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
   })
 
   const noUpcomingConcerts = (
-    <div className='centerContent flex-col container relative w-full p-6 bg-primary-950'>
+    <div className='centerContent flex-col container relative w-full md:p-6 bg-primary-950'>
       {
         bandName ? (
           <div className='text-center text-primary-100 tracking-wider leading-relaxed py-1'>
@@ -50,13 +50,13 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
             }
           </div>
         ) : (
-          <div className='text-center font-khorla text-primary-100 tracking-wider py-1'>
-            <p className='text-xl pb-1'>
+          <div className='text-center text-xs md:text-base text-primary-100 tracking-wider leading-relaxed py-1 flex flex-col gap-2'>
+            <p className='text-lg md:text-xl font-medium pb-1'>
               No upcoming concerts at this moment
             </p>
             {
               email && (
-                <p>contact <a className='text-accent-500 text-sm' href={`mailto:${email}`}>{email}</a> to book a concert</p>
+                <p>contact <a className='text-accent-500 text-lg md:text-2xl font-cursive' href={`mailto:${email}`}>{email}</a> to book a concert</p>
               )
             }
           </div>
@@ -88,15 +88,19 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
 
   return (
     <div className={`flex flex-col ${concerts?.previous?.length && 'gap-10 md:gap-16'} ${!noPadding && 'py-10 md:py-16'} ${className}`}>
-      <div className='container flex flex-col px-4 gap-10'>
+      <div className='container flex flex-col px-4 gap-2 md:gap-10'>
         <Title title='Upcoming' />
-        {upcomingConcerts?.length ? upcomingConcerts : noUpcomingConcerts}
+        <div className='flex flex-col px-4 gap-8'>
+          {upcomingConcerts?.length ? upcomingConcerts : noUpcomingConcerts}
+        </div>
       </div>
 
       {previousConcerts?.length > 0 && (
-        <div className='container flex flex-col px-4 gap-10'>
+        <div className='container flex flex-col px-4 gap-2 md:gap-10'>
           <Title title='Previous' />
-          {previousConcerts}
+          <div className='flex flex-col px-4 gap-4 md:gap-6'>
+            {previousConcerts}
+          </div>
         </div>
       )}
     </div>

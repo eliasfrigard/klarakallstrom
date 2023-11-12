@@ -19,6 +19,7 @@ const IconHandler = ({
 }) => {
   const [mailLink, setMailLink] = React.useState(null)
   const [addressLink, setAddressLink] = React.useState(null)
+  const [noIcons, setNoIcons] = React.useState(false)
 
   React.useEffect(() => {
     if (!address) {
@@ -36,6 +37,25 @@ const IconHandler = ({
     }
   }, [email, websiteName])
 
+  React.useEffect(() => {
+    if (
+      !email
+      && !facebook
+      && !instagram
+      && !spotify
+      && !youTube
+      && !website
+      && !tickets
+      && !address
+      && !bands
+      && !websiteName
+    ) {
+      setNoIcons(true)
+    } else {
+      setNoIcons(false)
+    }
+  }, [email, facebook, instagram, spotify, website, youTube, tickets, address, bands, websiteName])
+
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
       <Tooltip content={tooltip} className='bg-primary-950 border border-primary-100 font-khorla tracking-wider px-3 py-2'>
@@ -50,6 +70,8 @@ const IconHandler = ({
       </Tooltip>
     )
   }
+
+  if (noIcons) return ''
 
   return (
     <div className={`flex text-2xl justify-center items-center gap-5 z-10 ${className}`}>
