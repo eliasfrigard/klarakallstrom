@@ -48,8 +48,8 @@ const Contact = ({ hero, mobileHero, pageTitle }) => {
             className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest gap-2 md:gap-3 text-center px-4 delay-[1000ms]'
           >
             <p className='text-4xl md:text-8xl  tracking-wider font-cursive'>Klara Källström</p>
-            <p className=' md:text-lg'>klaralovisa.kallstrom@gmail.com</p>
-            <p className=' md:text-lg'>+46(0)70-1234567</p>
+            <p className=' md:text-lg font-josefin'>klaralovisa.kallstrom@gmail.com</p>
+            <p className=' md:text-lg font-josefin'>+46(0)70-1234567</p>
           </AnimateIn>
         </div>
       </Hero>
