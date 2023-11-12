@@ -10,7 +10,7 @@ const Hero = ({ children, className, desktopImg, mobileImg, altText, overlay = t
           alt={altText}
           src={desktopImg || mobileImg}
           fill
-          className={`hidden md:block object-cover`}
+          className={`${mobileImg && 'hidden md:block'} object-cover`}
         />
 
         {mobileImg &&
@@ -30,7 +30,7 @@ const Hero = ({ children, className, desktopImg, mobileImg, altText, overlay = t
           ></AnimateIn>
         )}
 
-        <div className='z-10 mt-85 centerContent'>{children}</div>
+        <div className='z-10 pt-[75px] h-full w-full centerContent'>{children}</div>
       </div>
     </AnimateIn>
   )

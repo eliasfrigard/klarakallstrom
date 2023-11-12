@@ -5,7 +5,7 @@ import Video from '../components/Video'
 
 import { createClient } from 'contentful'
 
-export default function Home({ pageTitle, pageSlogan, hero, mobileHero, youTubeLink }) {
+export default function Home({ pageTitle, hero, mobileHero, youTubeLink }) {
   return (
     <Layout
       pageTitle={pageTitle}
@@ -20,23 +20,23 @@ export default function Home({ pageTitle, pageSlogan, hero, mobileHero, youTubeL
         desktopImg={hero}
         heroPosition="top"
       >
-        <div className="centerContent flex-col gap-4 text-white tracking-widest font-cursive">
+        <div className="centerContent text-center flex-col gap-4 text-white tracking-widest font-cursive">
           <AnimateIn animationType="slide" slideDirection="top" classes="delay-[1500ms]">
-            <h1 className="lg:text-9xl tracking-wider">Klara Källström</h1>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl tracking-wider">Klara Källström</h1>
           </AnimateIn>
 
           <div className="flex">
-            <AnimateIn classes="px-8 flex items-end delay-[1500ms]" animationType="slide" slideDirection="left">
-              <h2 className="lg:text-4xl font-bold leading-none tracking-widest font-josefin">C</h2>
-              <h2 className="lg:text-3xl leading-none tracking-widest font-josefin mb-[1px]">ellist</h2>
+            <AnimateIn classes="px-4 md:px-8 flex items-end delay-[1500ms]" animationType="slide" slideDirection="left">
+              <h2 className="text-xl lg:text-4xl font-bold leading-none tracking-widest font-josefin">C</h2>
+              <h2 className="text-lg lg:text-3xl leading-none tracking-widest font-josefin">ellist</h2>
             </AnimateIn>
-            <AnimateIn classes="px-8 border-x border-opacity-20 flex items-end delay-[1500ms]" animationType="slide" slideDirection="bottom">
-              <h2 className="lg:text-4xl font-bold leading-none tracking-widest font-josefin">A</h2>
-              <h2 className="lg:text-3xl leading-none tracking-widest font-josefin mb-[1px]">rtist</h2>
+            <AnimateIn classes="px-4 md:px-8 border-x border-opacity-20 flex items-end delay-[1500ms]" animationType="slide" slideDirection="bottom">
+              <h2 className="text-xl lg:text-4xl font-bold leading-none tracking-widest font-josefin">A</h2>
+              <h2 className="text-lg lg:text-3xl leading-none tracking-widest font-josefin">rtist</h2>
             </AnimateIn>
-            <AnimateIn classes="px-8 flex items-end delay-[1500ms]" animationType="slide" slideDirection="right">
-              <h2 className="lg:text-4xl font-bold leading-none tracking-widest font-josefin">C</h2>
-              <h2 className="lg:text-3xl leading-none tracking-widest font-josefin mb-[1px]">omposer</h2>
+            <AnimateIn classes="px-4 md:px-8 flex items-end delay-[1500ms]" animationType="slide" slideDirection="right">
+              <h2 className="text-xl lg:text-4xl font-bold leading-none tracking-widest font-josefin">C</h2>
+              <h2 className="text-lg lg:text-3xl leading-none tracking-widest font-josefin">omposer</h2>
             </AnimateIn>
           </div>
 
