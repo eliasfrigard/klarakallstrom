@@ -68,7 +68,7 @@ const IconHandler = ({
 
   return (
     <div className={`flex text-2xl justify-center items-center gap-5 z-10 ${className}`}>
-      {
+      {/* {
         address && (
           <LinkIcon href={addressLink} tooltip='Google Maps'>
             <BsPinMapFill className='soMeIcon' />
@@ -123,7 +123,7 @@ const IconHandler = ({
             <BsYoutube className='soMeIcon' />
           </LinkIcon>
         )
-      }
+      } */}
     </div>
   )
 }
