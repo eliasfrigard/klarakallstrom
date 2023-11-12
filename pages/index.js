@@ -47,7 +47,7 @@ export default function Home({ pageTitle, hero, mobileHero, youTubeLink }) {
 
       {
         youTubeLink && (
-          <div className="container py-16">
+          <div className="container px-2 md:px-0 py-6 md:py-16">
             <Video
               prominent
               key={youTubeLink}
