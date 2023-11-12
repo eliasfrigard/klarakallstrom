@@ -91,7 +91,7 @@ export default function Header() {
         >
           <div id='left'>
             <Link className='cursor-pointer text-2xl font-cursive tracking-widest' href='/'>
-              Klara Källström
+              {pageName}
             </Link>
           </div>
           <div id='center' className='flex text-sm gap-4 font-medium justify-center tracking-widest'>
@@ -152,8 +152,8 @@ export default function Header() {
         <div
           className={`
           lg:hidden
-          grid
-          grid-cols-2
+          flex
+          justify-between
           items-center
           h-[75px]
           w-full
@@ -165,7 +165,7 @@ export default function Header() {
         >
           <div id='left'>
             <Link href='/'>
-              <p className='cursor-pointer text-lg font-bold tracking-widest uppercase'>{pageName}</p>
+              <p className='cursor-pointer font-cursive tracking-widest text-3xl'>{pageName}</p>
             </Link>
           </div>
           <div id='right' className='flex gap-6 justify-end items-center '>
@@ -175,10 +175,10 @@ export default function Header() {
       </div>
 
       <div
-        className={`lg:hidden fixed flex flex-col justify-evenly items-center pt-[75px] h-screen w-screen bg-secondary-500 z-10 duration-300 transform ${!mobileNavOpen && '-translate-y-[100vh]'
+        className={`lg:hidden fixed flex flex-col justify-evenly items-center pt-[75px] h-screen w-screen bg-secondary-500 z-40 duration-300 transform ${!mobileNavOpen && '-translate-y-[100vh]'
           }`}
       >
-        <div className='container flex flex-col justify-center items-center gap-10'>
+        <div className='container flex flex-col justify-center items-center gap-8'>
           {
             links.map((link) => (
               <Link key={link.href} href={link.href} className={`${activeLinkStyling(link.href)} mobileNavLink capitalize`}>
