@@ -15,8 +15,6 @@ const IconHandler = ({
   className,
   websiteName,
 }) => {
-  console.log('🚀 || file: IconHandler.js:18 || tickets:', tickets)
-  console.log('🚀 || file: IconHandler.js:18 || website:', website)
   const [mailLink, setMailLink] = React.useState(null)
   const [addressLink, setAddressLink] = React.useState(null)
   const [noIcons, setNoIcons] = React.useState(false)
@@ -54,15 +52,14 @@ const IconHandler = ({
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
       <Tooltip content={tooltip} className='bg-primary-950 border border-primary-100 font-open tracking-wider px-3 py-2'>
-        <div></div>
-        {/* <a
+        <a
           href={href}
           target='_blank'
           rel='noopener noreferrer'
           className='duration-200 hover:text-accent-500'
         >
-          {children}
-        </a> */}
+          abc
+        </a>
       </Tooltip>
     )
   }
