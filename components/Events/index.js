@@ -15,8 +15,6 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
   }
 
   const upcomingConcerts = concerts?.upcoming?.map((c, index) => {
-    const bands = mapBandProps(c?.fields?.band)
-    //
     return (
       <Event
         key={c.sys.id}
@@ -25,7 +23,6 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
         displayTime={c.fields.displayTime}
         cityCountry={c.fields.cityCountry}
         address={c.fields.address}
-        bands={bands}
         website={c.fields.website}
         facebook={c.fields.facebook}
         tickets={c.fields.tickets}

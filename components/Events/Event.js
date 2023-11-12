@@ -7,7 +7,6 @@ const Event = ({
   displayTime,
   cityCountry,
   address,
-  bands,
   website,
   facebook,
   tickets,
@@ -43,7 +42,7 @@ const Event = ({
         <p className='font-medium text-lg font-josefin text-center'>{title}</p>
         <p className='hidden text-sm lg:block font-open opacity-80'>{cityCountry}</p>
 
-        <IconHandler website={website} facebook={facebook} tickets={tickets} address={address} bands={bands} />
+        <IconHandler website={website} facebook={facebook} tickets={tickets} address={address} />
       </div>
 
       {/* MOBILE VIEW */}
@@ -58,7 +57,7 @@ const Event = ({
         <p className=' text-lg font-josefin text-center'>{title}</p>
         <p className='hidden lg:block font-bold opacity-80'>{cityCountry}</p>
 
-        <IconHandler className='mt-1' website={website} facebook={facebook} tickets={tickets} address={address} bands={bands} />
+        <IconHandler className='mt-1' website={website} facebook={facebook} tickets={tickets} address={address} />
       </div>
     </>
   )
