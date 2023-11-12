@@ -17,7 +17,7 @@ const IconHandler = ({
 }) => {
   const [mailLink, setMailLink] = React.useState(null)
   const [addressLink, setAddressLink] = React.useState(null)
-  // const [noIcons, setNoIcons] = React.useState(false)
+  const [noIcons, setNoIcons] = React.useState(false)
 
   React.useEffect(() => {
     if (!address) {
