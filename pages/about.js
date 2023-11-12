@@ -40,13 +40,19 @@ const About = ({
   return (
     <Layout pageTitle={pageTitle}>
       <div className='-mt-[85px] pt-[85px] min-h-screen'>
-        <div className='container centerContent flex-col gap-8 md:gap-16 px-6 py-8 md:px-0 md:py-16'>
-          {
-            mobileHero && (
-              <Hero overlay={false} altText='Hero Image' heroPosition='top' mobileImg={mobileHero} className='md:hidden' />
-            )
-          }
-
+        {mobileHero &&
+          (
+            <div className='md:hidden h-screen -mt-[75px]'>
+              <Image
+                alt="Mobile Hero"
+                src={mobileHero}
+                fill
+                className='object-cover object-bottom'
+              />
+            </div>
+          )
+        }
+        <div className='container centerContent flex-col gap-8 md:gap-16 px-6 py-8 lg:px-0 md:py-16'>
           {
             hero && (
               <AnimateIn className='relative w-full aspect-[9/16] md:aspect-video hidden md:block'>
@@ -60,7 +66,7 @@ const About = ({
             )
           }
 
-          <AnimateIn threshold={0} className='text-center md:text-justify leading-[2rem] tracking-wide font-sans font-medium z-10 md:px-10'>
+          <AnimateIn threshold={0} className='text-center md:text-justify leading-[2rem] tracking-wide z-10 md:px-10'>
             <TextLayout text={biography} />
           </AnimateIn>
         </div>

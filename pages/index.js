@@ -5,7 +5,7 @@ import Video from '../components/Video'
 
 import { createClient } from 'contentful'
 
-export default function Home({ pageTitle, hero, mobileHero, youTubeLink }) {
+export default function Home({ pageTitle, hero, mobileHero, youTubeLink, altYouTubeLink }) {
   return (
     <Layout
       pageTitle={pageTitle}
@@ -45,18 +45,33 @@ export default function Home({ pageTitle, hero, mobileHero, youTubeLink }) {
         </div>
       </Hero>
 
-      {
-        youTubeLink && (
-          <div className="container px-2 md:px-0 py-6 md:py-16">
-            <Video
-              prominent
-              key={youTubeLink}
-              title={youTubeLink}
-              link={youTubeLink}
-            />
-          </div>
-        )
-      }
+      <div className="container px-2 md:px-0 py-6 md:py-16 flex flex-col gap-6 md:gap-10">
+        {
+          youTubeLink && (
+            <div className="">
+              <Video
+                prominent
+                key={youTubeLink}
+                title={youTubeLink}
+                link={youTubeLink}
+              />
+            </div>
+          )
+        }
+
+        {
+          altYouTubeLink && (
+            <div className="">
+              <Video
+                prominent
+                key={altYouTubeLink}
+                title={altYouTubeLink}
+                link={altYouTubeLink}
+              />
+            </div>
+          )
+        }
+      </div>
     </Layout>
   )
 }
@@ -82,7 +97,8 @@ export async function getStaticProps() {
       mobileHero,
       pageTitle: page?.title,
       pageSlogan: page?.slogan,
-      youTubeLink: page?.youTubeVideo || null
+      youTubeLink: page?.youTubeVideo || null,
+      altYouTubeLink: page?.altYouTubeLink || null
     },
   }
 }
