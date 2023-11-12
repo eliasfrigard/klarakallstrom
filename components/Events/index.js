@@ -91,7 +91,7 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
       <div className='container flex flex-col px-4 gap-2 md:gap-10'>
         <Title title='Upcoming' />
         <div className='flex flex-col px-4 gap-8'>
-          {/* {upcomingConcerts?.length ? upcomingConcerts : noUpcomingConcerts} */}
+          {upcomingConcerts?.length ? upcomingConcerts : noUpcomingConcerts}
         </div>
       </div>
 
