@@ -27,7 +27,7 @@ const Hero = ({ children, className, desktopImg, mobileImg, altText, overlay = t
 
         {overlay && (
           <AnimateIn
-            className='delay-[1500ms] absolute w-full h-screen bg-secondary-500 bg-opacity-40 backdrop-blur-sm'
+            className='absolute w-full h-screen bg-secondary-500 bg-opacity-40 backdrop-blur-sm'
           ></AnimateIn>
         )}
 
