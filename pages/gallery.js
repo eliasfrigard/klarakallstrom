@@ -106,7 +106,7 @@ const Gallery = ({ pageTitle, videos, images }) => {
           <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-1 container px-2'>
             {
               images.map((image, index) => (
-                <ImageLayout handleOnClick={() => handleOpenModal(index)} key={image} index={index} image={'https:' + image.url} />
+                <ImageLayout handleOnClick={() => handleOpenModal(index)} key={image.url} index={index} image={'https:' + image.url} />
               ))
             }
           </div>
