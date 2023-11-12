@@ -9,7 +9,7 @@ export default function Home({ pageTitle, hero, mobileHero, youTubeLink, altYouT
   return (
     <Layout
       pageTitle={pageTitle}
-      imageUrl=""
+      imageUrl={hero}
       pageUrl="/"
       pageDescription=""
       footer={Boolean(youTubeLink)}

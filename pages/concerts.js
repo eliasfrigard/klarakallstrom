@@ -50,15 +50,17 @@ export async function getStaticProps() {
 }
 
 export default function Concerts({
+  pageTitle,
   hero,
   mobileHero,
   concerts,
 }) {
   return (
     <Layout
-      pageTitle='Concerts'
+      pageTitle={pageTitle}
       imageUrl={hero}
       pageUrl='/concerts'
+      pageDescription=""
     >
       {hero && (
         <Hero
