@@ -33,7 +33,8 @@ export default function Layout({
     }
   }, [router])
 
-  const title = `${pageTitle} | Klara Källström`
+  const pageName = 'Klara Källström'
+  const title = pageTitle + ' - ' + pageName
   // TODO: Correct urls.
   const baseUrl = 'https://www.polentamusic.com'
   const faviconUrl = '/path/to/favicon.ico'
@@ -50,7 +51,7 @@ export default function Layout({
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta name='robots' content='index,follow' />
         <meta itemProp='image' content={imageUrl} />
-        <meta property='og:title' content={pageTitle} key='title' />
+        <meta property='og:title' content={pageTitle + ' - ' + pageName} key='title' />
         <meta property='og:description' content={pageDescription} />
         <meta property='og:image' content={imageUrl} />
         <meta property='og:url' content={baseUrl + pageUrl} />
