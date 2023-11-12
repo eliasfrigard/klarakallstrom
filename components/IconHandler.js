@@ -53,7 +53,7 @@ const IconHandler = ({
     return (
       <Tooltip className='bg-primary-950 border border-primary-100 font-open tracking-wider px-3 py-2'>
         <a
-          href={href}
+          href='https://google.se'
           target='_blank'
           rel='noopener noreferrer'
           className='duration-200 hover:text-accent-500'
