@@ -3,7 +3,6 @@ import Image from 'next/image'
 import AnimateIn from '../components/AnimateIn'
 
 const Hero = ({ children, className, desktopImg, mobileImg, altText, overlay = true }) => {
-  console.log('🚀 || file: Hero.js:6 || Hero || mobileImg:', mobileImg)
   return (
     <AnimateIn className={className}>
       <div id='hero' className='relative h-screen -mt-[75px] flex justify-center items-center shadow-lg'>

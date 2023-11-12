@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Layout from '../components/layouts/Default'
 import AnimateIn from '../components/AnimateIn'
 import TextLayout from '../components/TextLayout'
-import Hero from '../components/Hero'
 
 import { createClient } from 'contentful'
 
