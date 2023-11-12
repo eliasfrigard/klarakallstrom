@@ -89,7 +89,6 @@ const Gallery = ({ pageTitle, videos, images }) => {
   return (
     <Layout
       pageTitle={pageTitle}
-      imageUrl={hero}
       pageUrl="/gallery"
       pageDescription=""
     >
