@@ -37,7 +37,12 @@ const About = ({
   biography,
 }) => {
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout
+      pageTitle={pageTitle}
+      imageUrl={hero}
+      pageUrl="/about"
+      pageDescription=""
+    >
       <div className='-mt-[85px] pt-[85px] min-h-screen'>
         {mobileHero &&
           (

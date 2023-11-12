@@ -34,7 +34,7 @@ const Contact = ({ hero, mobileHero, pageTitle }) => {
       pageTitle={pageTitle}
       pageDescription={pageTitle}
       imageUrl={hero}
-      pageUrl='/concerts'
+      pageUrl='/contact'
       footer={false}
     >
       <Hero
