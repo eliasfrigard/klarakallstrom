@@ -22,7 +22,7 @@ export default function Home({ pageTitle, hero, mobileHero, youTubeLink, altYouT
       >
         <div className="centerContent text-center flex-col gap-4 text-white tracking-widest font-cursive">
           <AnimateIn animationType="slide" slideDirection="top" classes="delay-[1000ms]">
-            <h1 className="text-4xl md:text-7xl lg:text-9xl tracking-wider">Klara Källström</h1>
+            <h1 className="text-4xl sm:text-7xl lg:text-9xl tracking-wider">Klara Källström</h1>
           </AnimateIn>
 
           <div className="flex">
