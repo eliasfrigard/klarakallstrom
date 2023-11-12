@@ -82,6 +82,41 @@ const IconHandler = ({
           </LinkIcon>
         )
       }
+      {
+        website && (
+          <LinkIcon href={website} tooltip='Website'>
+            <BsGlobeEuropeAfrica className='soMeIcon' />
+          </LinkIcon>
+        )
+      }
+      {
+        facebook && (
+          <LinkIcon href={facebook} tooltip='Facebook'>
+            <BsFacebook className='soMeIcon' />
+          </LinkIcon>
+        )
+      }
+      {
+        instagram && (
+          <LinkIcon href={instagram} tooltip='Instagram'>
+            <BsInstagram className='soMeIcon' />
+          </LinkIcon>
+        )
+      }
+      {
+        spotify && (
+          <LinkIcon href={spotify} tooltip='Spotify'>
+            <BsSpotify className='soMeIcon' />
+          </LinkIcon>
+        )
+      }
+      {
+        youTube && (
+          <LinkIcon href={youTube} tooltip='YouTube'>
+            <BsYoutube className='soMeIcon' />
+          </LinkIcon>
+        )
+      }
     </div>
   )
 }
