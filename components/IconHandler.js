@@ -13,7 +13,6 @@ const IconHandler = ({
   website,
   tickets,
   address,
-  bands,
   className,
   websiteName,
 }) => {
@@ -47,14 +46,13 @@ const IconHandler = ({
       && !website
       && !tickets
       && !address
-      && !bands
       && !websiteName
     ) {
       setNoIcons(true)
     } else {
       setNoIcons(false)
     }
-  }, [email, facebook, instagram, spotify, website, youTube, tickets, address, bands, websiteName])
+  }, [email, facebook, instagram, spotify, youTube, website, tickets, address, websiteName, setNoIcons])
 
   const LinkIcon = ({ children, href, tooltip }) => {
     return (
