@@ -129,11 +129,6 @@ const IconHandler = ({
           </LinkIcon>
         )
       }
-      {
-        bands && (
-          bands.map((b) => <Avatar key={b.name} imageUrl={b.imageUrl} bandName={b.name} />)
-        )
-      }
     </div>
   )
 }
