@@ -45,7 +45,7 @@ const Contact = ({ hero, mobileHero, pageTitle }) => {
       >
         <div className='relative w-full h-full z-10'>
           <AnimateIn
-            className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest gap-2 md:gap-3 text-center px-4 delay-[1000ms]'
+            className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest gap-2 text-center px-4 delay-[1000ms]'
           >
             <p className='text-4xl md:text-8xl  tracking-wider font-cursive'>Klara Källström</p>
             <p className=' md:text-lg font-josefin'>klaralovisa.kallstrom@gmail.com</p>
