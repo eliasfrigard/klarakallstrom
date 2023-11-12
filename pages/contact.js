@@ -43,14 +43,14 @@ const Contact = ({ hero, mobileHero, pageTitle }) => {
         desktopImg={hero}
         mobileImg={mobileHero}
       >
-        <div className='relative pt-[85px] w-screen h-screen z-10'>
+        <div className='relative w-full h-full z-10'>
           <AnimateIn
             delay={1000}
-            className='w-full h-full centerContent flex-col text-primary-500 font-khorla tracking-widest font-bold gap-3 text-center'
+            className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest font-medium gap-2 md:gap-3 text-center px-4'
           >
-            <p className='text-6xl leading-tight'>Klara Källström</p>
-            <p className='text-2xl'>klara.kallstrom@gmail.com</p>
-            <p className='text-2xl'>+47(0)70-6691374</p>
+            <p className='text-5xl md:text-8xl leading-tight font-light font-cursive'>Klara Källström</p>
+            <p className=' md:text-xl'>klaralovisa.kallstrom@gmail.com</p>
+            <p className=' md:text-xl'>+46(0)70-1234567</p>
           </AnimateIn>
         </div>
       </Hero>
