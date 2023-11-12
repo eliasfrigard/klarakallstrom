@@ -96,7 +96,7 @@ const Events = ({ concerts, bandName, email, className, noPadding }) => {
         <div className='container flex flex-col px-4 gap-2 md:gap-10'>
           <Title title='Previous' />
           <div className='flex flex-col px-4 gap-4 md:gap-6'>
-            {/* {previousConcerts} */}
+            {previousConcerts}
           </div>
         </div>
       )}
