@@ -70,7 +70,7 @@ export default function Concerts({
           mobileImg={mobileHero}
         >
           <AnimateIn classes="centerContent flex-col text-primary-500 tracking-widest font-cursive delay-[1000ms]">
-            <h1 className="text-6xl lg:text-9xl tracking-wider drop-shadow-sm">Concerts</h1>
+            <h1 className="text-6xl lg:text-9xl tracking-wider drop-shadow-sm opacity-80">Concerts</h1>
           </AnimateIn>
         </Hero>
       )}
