@@ -230,7 +230,7 @@ export default function Header() {
         </div>
         <div className='text-primary-500 tracking-wide text-center'>
           <p className='text-sm mb-2'>{`Copyright ${currentYear} © ${pageName}`}</p>
-          <a href='mailto:' className='tracking-wider text-xl font-cursive'>
+          <a href={socialMedia.email} className='tracking-wider text-xl font-cursive'>
             {emailAddress}
           </a>
         </div>
