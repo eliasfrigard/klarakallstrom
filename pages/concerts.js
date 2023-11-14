@@ -69,9 +69,16 @@ export default function Concerts({
           desktopImg={hero}
           mobileImg={mobileHero}
         >
-          <AnimateIn classes="centerContent flex-col text-primary-500 tracking-widest font-cursive delay-[1000ms]">
-            <h1 className="text-6xl lg:text-9xl tracking-wider drop-shadow-sm opacity-80">Concerts</h1>
-          </AnimateIn>
+          <div className="flex text-4xl sm:text-7xl lg:text-9xl tracking-wider opacity-80 font-cursive text-primary-500">
+            <AnimateIn classes="duration-[2000ms] delay-[1000ms]"><h1>C</h1></AnimateIn>
+            <AnimateIn classes="duration-[2000ms] delay-[1050ms]"><h1>o</h1></AnimateIn>
+            <AnimateIn classes="duration-[2000ms] delay-[1100ms]"><h1>n</h1></AnimateIn>
+            <AnimateIn classes="duration-[2000ms] delay-[1150ms]"><h1>c</h1></AnimateIn>
+            <AnimateIn classes="duration-[2000ms] delay-[1200ms]"><h1>e</h1></AnimateIn>
+            <AnimateIn classes="duration-[2000ms] delay-[1250ms]"><h1>r</h1></AnimateIn>
+            <AnimateIn classes="duration-[2000ms] delay-[1300ms]"><h1>t</h1></AnimateIn>
+            <AnimateIn classes="duration-[2000ms] delay-[1350ms]"><h1>s</h1></AnimateIn>
+          </div>
         </Hero>
       )}
 
