@@ -178,10 +178,10 @@ export default function Header() {
         className={`lg:hidden fixed flex flex-col justify-evenly items-center pt-[75px] h-screen w-screen bg-secondary-500 z-40 duration-300 transform ${!mobileNavOpen && '-translate-y-[100vh]'
           }`}
       >
-        <div className='container flex flex-col justify-center items-center gap-8'>
+        <div className='container flex flex-col justify-center items-center gap-6'>
           {
             links.map((link) => (
-              <Link key={link.href} href={link.href} className={`${activeLinkStyling(link.href)} mobileNavLink capitalize`}>
+              <Link onClick={toggleMobileNav} key={link.href} href={link.href} className={`${activeLinkStyling(link.href)} mobileNavLink capitalize`}>
                 {link.label}
               </Link>
             ))
