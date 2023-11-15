@@ -54,14 +54,14 @@ const TextLayout = ({
 
   if (textLength < maxLengthForTwoColumns || type === 'single') {
     return (
-      <div className={`prose max-w-4xl prose-img:roundedShadow prose-img:shadow-md leading-[2.1rem] tracking-wider font-open text-center prose-headings:font-josefin prose-blockquote:border-primary-500 prose-blockquote:border-opacity-10 prose-blockquote:opacity-80 prose-blockquote:rounded prose-a:text-accent-500 flex flex-col items-center justify-center prose-blockquote:my-0 prose-p:my-0 prose-headings:my-0 space-y-6 ${className}`}>
+      <div className={`prose py-0 my-0 max-w-4xl prose-img:roundedShadow prose-img:shadow-md leading-[2.1rem] tracking-wider font-open text-center prose-headings:font-josefin prose-blockquote:border-primary-500 prose-blockquote:border-opacity-10 prose-blockquote:opacity-80 prose-blockquote:rounded prose-a:text-accent-500 flex flex-col items-center justify-center prose-blockquote:my-0 prose-p:my-0 prose-headings:my-0 space-y-6 ${className}`}>
         {documentToReactComponents(textDocument, options)}
       </div>
     )
   }
 
   return (
-    <div className={`prose max-w-7xl lg:columns-2 gap-10 prose-img:rounded prose-img:shadow-md leading-loose text-center md:text-justify prose-headings:underline prose-a:text-accent-500 ${className}`}>
+    <div className={`py-0 my-0 prose max-w-7xl lg:columns-2 gap-10 prose-img:rounded prose-img:shadow-md leading-loose text-center md:text-justify prose-headings:underline prose-a:text-accent-500 ${className}`}>
       {documentToReactComponents(textDocument, options)}
     </div>
   )
