@@ -21,7 +21,7 @@ export default function Home({ pageTitle, hero, mobileHero, youTubeLink, altYouT
         heroPosition="top"
       >
         <div className="centerContent text-center flex-col gap-3 md:gap-2 text-white tracking-widest font-cursive">
-          <div className="flex text-4xl sm:text-7xl lg:text-9xl tracking-wider opacity-80">
+          <div className="flex text-5xl sm:text-7xl lg:text-9xl tracking-wider opacity-80">
             <AnimateIn classes="duration-[2000ms] delay-[500ms]"><h1>K</h1></AnimateIn>
             <AnimateIn classes="duration-[2000ms] delay-[600ms]"><h1>l</h1></AnimateIn>
             <AnimateIn classes="duration-[2000ms] delay-[700ms]"><h1>a</h1></AnimateIn>
