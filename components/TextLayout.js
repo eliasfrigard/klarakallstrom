@@ -11,6 +11,7 @@ const options = {
       if (node.data.target.sys.contentType.sys.id === "video") {
         return (
           <Video
+            className="py-4"
             key={node.data.target.fields.title}
             title={node.data.target.fields.title}
             link={node.data.target.fields.youTubeLink}
