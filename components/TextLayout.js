@@ -1,13 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
+import Video from './Video'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
 
 const options = {
   renderNode: {
+    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+      if (node.data.target.sys.contentType.sys.id === "video") {
+        return (
+          <Video
+            key={node.data.target.fields.title}
+            title={node.data.target.fields.title}
+            link={node.data.target.fields.youTubeLink}
+          />
+        );
+      }
+    },
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      const { url, fileName, contentType } = node.data.target.fields.file
+      const { url, fileName } = node.data.target.fields.file
       return (
         <Image
           src={`https:${url}`}
