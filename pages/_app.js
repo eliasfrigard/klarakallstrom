@@ -19,6 +19,7 @@ const cursive = Alex_Brush({
   variable: '--font-cursive',
 })
 
+
 function MyApp({ Component, pageProps }) {
   return (
     <div id='__next' className={`${open.variable} ${josefin.variable} ${cursive.variable} font-open`}>
