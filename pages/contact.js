@@ -1,6 +1,7 @@
 import Layout from '../components/layouts/Default'
 import AnimateIn from '../components/AnimateIn'
 import Hero from '../components/Hero'
+import TextLayout from '../components/TextLayout'
 
 import { createClient } from 'contentful'
 
@@ -24,11 +25,12 @@ export async function getStaticProps() {
       hero,
       mobileHero,
       pageTitle: page.title,
+      contactInfo: page.contactInformation
     },
   }
 }
 
-const Contact = ({ hero, mobileHero, pageTitle }) => {
+const Contact = ({ hero, mobileHero, pageTitle, contactInfo }) => {
   return (
     <Layout
       pageTitle={pageTitle}
@@ -47,9 +49,7 @@ const Contact = ({ hero, mobileHero, pageTitle }) => {
           <AnimateIn
             className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest gap-2 text-center px-4 delay-[1000ms]'
           >
-            <p className='text-4xl md:text-8xl  tracking-wider font-cursive'>Klara Källström</p>
-            <p className=' md:text-lg font-josefin'>klaralovisa.kallstrom@gmail.com</p>
-            <p className=' md:text-lg font-josefin'>+46(0)70-1234567</p>
+            <TextLayout text={contactInfo} className="text-primary-500  prose-headings:text-primary-500 prose-headings:font-cursive prose-headings:text-5xl md:prose-headings:text-8xl prose-headings:font-light leading-none prose:font-josefin prose-xl prose-p:font-josefin opacity-90" />
           </AnimateIn>
         </div>
       </Hero>
