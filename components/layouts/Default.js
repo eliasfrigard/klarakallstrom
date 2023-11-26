@@ -6,14 +6,7 @@ import Head from 'next/head'
 import Header from '../Header'
 import Footer from '../Footer'
 
-export default function Layout({
-  children,
-  pageTitle,
-  pageDescription,
-  imageUrl,
-  pageUrl,
-  footer = true,
-}) {
+export default function Layout({ children, pageTitle, pageDescription, imageUrl, pageUrl, footer = true }) {
   const router = useRouter()
 
   const [loading, setLoading] = useState(false)
@@ -36,15 +29,15 @@ export default function Layout({
   const pageName = 'Klara Källström'
   const title = pageTitle + ' - ' + pageName
   // TODO: Correct urls.
-  const baseUrl = 'https://www.polentamusic.com'
-  const faviconUrl = '/path/to/favicon.ico'
+  const baseUrl = 'https://www.klarakallstrommusic.com'
+  const faviconUrl = '/favicon.ico'
 
   return (
     <>
       <Head>
-        <meta charSet="UTF-8" />
+        <meta charSet='UTF-8' />
         <title>{title}</title>
-        <link rel="icon" href={faviconUrl} />
+        <link rel='icon' href={faviconUrl} />
         <link rel='canonical' href={baseUrl + pageUrl} />
         <meta name='description' content={pageDescription} />
         <meta name='author' content='Elias Frigård' />
@@ -55,7 +48,7 @@ export default function Layout({
         <meta property='og:description' content={pageDescription} />
         <meta property='og:image' content={imageUrl} />
         <meta property='og:url' content={baseUrl + pageUrl} />
-        <meta property="og:type" content="website" />
+        <meta property='og:type' content='website' />
       </Head>
       <Header />
       <main
@@ -64,9 +57,7 @@ export default function Layout({
       >
         {children}
       </main>
-      {
-        footer && <Footer />
-      }
+      {footer && <Footer />}
     </>
   )
 }
