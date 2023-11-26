@@ -34,7 +34,7 @@ const Contact = ({ hero, mobileHero, pageTitle, contactInfo }) => {
   return (
     <Layout
       pageTitle={pageTitle}
-      pageDescription={pageTitle}
+      pageDescription=""
       imageUrl={hero}
       pageUrl='/contact'
       footer={false}

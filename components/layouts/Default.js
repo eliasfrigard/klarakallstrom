@@ -11,6 +11,8 @@ export default function Layout({ children, pageTitle, pageDescription, imageUrl,
 
   const [loading, setLoading] = useState(false)
 
+  const localPageDescription = "Klara Källström är en musiker, cellist och kompositör från Ångermanland, bosatt i Stockholm. Hennes kärlek för den nordiska folkmusiken och den västerländska konstmusiken har inspirerat till hennes egenskrivna musik. I hennes kompositioner får man uppleva en bred palett av klanger, där minimalistiska mönster möter melodik och rytmik från den nordiska folkmusiken."
+
   useEffect(() => {
     const handleStart = () => setLoading(true)
     const handleComplete = () => setLoading(false)
@@ -28,7 +30,6 @@ export default function Layout({ children, pageTitle, pageDescription, imageUrl,
 
   const pageName = 'Klara Källström'
   const title = pageTitle + ' - ' + pageName
-  // TODO: Correct urls.
   const baseUrl = 'https://www.klarakallstrommusic.com'
   const faviconUrl = '/favicon.ico'
 
@@ -39,13 +40,13 @@ export default function Layout({ children, pageTitle, pageDescription, imageUrl,
         <title>{title}</title>
         <link rel='icon' href={faviconUrl} />
         <link rel='canonical' href={baseUrl + pageUrl} />
-        <meta name='description' content={pageDescription} />
+        <meta name='description' content={localPageDescription} />
         <meta name='author' content='Elias Frigård' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta name='robots' content='index,follow' />
         <meta itemProp='image' content={imageUrl} />
         <meta property='og:title' content={pageTitle + ' - ' + pageName} key='title' />
-        <meta property='og:description' content={pageDescription} />
+        <meta property='og:description' content={localPageDescription} />
         <meta property='og:image' content={imageUrl} />
         <meta property='og:url' content={baseUrl + pageUrl} />
         <meta property='og:type' content='website' />

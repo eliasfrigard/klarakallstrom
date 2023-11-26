@@ -91,6 +91,7 @@ const Gallery = ({ pageTitle, videos, images }) => {
       pageTitle={pageTitle}
       pageUrl="/gallery"
       pageDescription=""
+      imageUrl={images[0].url}
     >
       <div className='-mt-[85px] pt-[85px] min-h-screen'>
         <div className='py-6 md:py-16 flex flex-col gap-6 md:gap-16'>
