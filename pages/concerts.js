@@ -69,7 +69,7 @@ export default function Concerts({
           desktopImg={hero}
           mobileImg={mobileHero}
         >
-          <div className="flex text-7xl lg:text-9xl tracking-wider opacity-80 font-cursive text-primary-500">
+          <div className="flex text-4xl sm:text-6xl lg:text-8xl tracking-wider opacity-80 font-josefin text-primary-500 uppercase font-bold drop-shadow">
             <AnimateIn classes="duration-[2000ms] delay-[1000ms]"><h1>C</h1></AnimateIn>
             <AnimateIn classes="duration-[2000ms] delay-[1050ms]"><h1>o</h1></AnimateIn>
             <AnimateIn classes="duration-[2000ms] delay-[1100ms]"><h1>n</h1></AnimateIn>

@@ -49,7 +49,7 @@ const Contact = ({ hero, mobileHero, pageTitle, contactInfo }) => {
           <AnimateIn
             className='w-full h-full centerContent flex-col text-primary-500 font-open tracking-widest gap-2 text-center px-4 delay-[1000ms]'
           >
-            <TextLayout text={contactInfo} className="text-primary-500  prose-headings:text-primary-500 prose-headings:font-cursive prose-headings:text-5xl md:prose-headings:text-8xl prose-headings:font-light leading-none prose:font-josefin prose-xl prose-p:font-josefin opacity-90" />
+            <TextLayout text={contactInfo} className="text-primary-500  prose-headings:text-primary-500 prose-headings:font-cursive prose-headings:text-5xl md:prose-headings:text-8xl prose-headings:font-normal leading-none prose:font-josefin prose-xl prose-p:font-josefin opacity-80" />
           </AnimateIn>
         </div>
       </Hero>
