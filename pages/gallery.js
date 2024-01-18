@@ -6,6 +6,7 @@ import ImageLayout from '../components/ImageLayout'
 import ImageModal from '../components/ImageModal'
 
 import { createClient } from 'contentful'
+import { getPlaiceholder } from 'plaiceholder'
 
 export async function getStaticProps() {
   const contentful = createClient({
@@ -20,13 +21,28 @@ export async function getStaticProps() {
   const imageRes = await contentful.getAssets()
 
   const videos = videoRes.items.map(item => item.fields)
-  const images = imageRes.items.map(item => item.fields.file)
+  const images = []
 
   const pageRes = await contentful.getEntries({
     content_type: 'galleryPage',
   })
 
   const page = pageRes.items[0].fields
+
+  for (const image of imageRes.items) {
+    const src = 'https:' + image.fields.file.url
+
+    const buffer = await fetch(src).then(async (res) =>
+      Buffer.from(await res.arrayBuffer())
+    )
+
+    const { base64 } = await getPlaiceholder(buffer)
+
+    images.push({
+      url: src,
+      blur: base64
+    })
+  }
 
   return {
     props: {
@@ -111,7 +127,7 @@ const Gallery = ({ pageTitle, videos, images }) => {
           <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-1 container px-2'>
             {
               images.map((image, index) => (
-                <ImageLayout handleOnClick={() => handleOpenModal(index)} key={image.url} index={index} image={'https:' + image.url} />
+                <ImageLayout handleOnClick={() => handleOpenModal(index)} key={image.url} index={index} image={image} />
               ))
             }
           </div>
@@ -119,7 +135,7 @@ const Gallery = ({ pageTitle, videos, images }) => {
       </div>
 
       {modalOpen && (
-        <ImageModal isOpen={modalOpen} handleClose={handleCloseModal} handleNext={nextImage} handlePrev={previousImage} image={selectedImage} isLast={currentIndex + 1 === images.length} isFirst={currentIndex === 0} />
+        <ImageModal isOpen={modalOpen} handleClose={handleCloseModal} handleNext={nextImage} handlePrev={previousImage} image={selectedImage?.url} isLast={currentIndex + 1 === images.length} isFirst={currentIndex === 0} />
       )}
     </Layout>
   )
