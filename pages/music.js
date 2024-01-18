@@ -52,11 +52,11 @@ const Music = ({
             mobileImg={mobileHero}
           >
             <div className="flex text-4xl sm:text-6xl lg:text-8xl tracking-wider opacity-80 font-josefin text-primary-500 uppercase font-bold drop-shadow">
-              <AnimateIn classes="duration-[2000ms] delay-[1000ms]"><h1>M</h1></AnimateIn>
-              <AnimateIn classes="duration-[2000ms] delay-[1050ms]"><h1>u</h1></AnimateIn>
-              <AnimateIn classes="duration-[2000ms] delay-[1100ms]"><h1>s</h1></AnimateIn>
-              <AnimateIn classes="duration-[2000ms] delay-[1150ms]"><h1>i</h1></AnimateIn>
-              <AnimateIn classes="duration-[2000ms] delay-[1200ms]"><h1>c</h1></AnimateIn>
+              <AnimateIn classes="duration-[1500ms] delay-[1000ms]"><h1>M</h1></AnimateIn>
+              <AnimateIn classes="duration-[1500ms] delay-[1000ms]"><h1>u</h1></AnimateIn>
+              <AnimateIn classes="duration-[1500ms] delay-[1000ms]"><h1>s</h1></AnimateIn>
+              <AnimateIn classes="duration-[1500ms] delay-[1000ms]"><h1>i</h1></AnimateIn>
+              <AnimateIn classes="duration-[1500ms] delay-[1000ms]"><h1>c</h1></AnimateIn>
             </div>
           </Hero>
         )}
