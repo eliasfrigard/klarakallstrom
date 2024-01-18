@@ -40,7 +40,7 @@ export default function Home({ pageTitle, hero, mobileHero, youTubeLink, altYouT
           </div>
 
           <div className="flex">
-            <div className="text lg:text-5xl font-light leading-none tracking-wider font-cursive flex drop-shadow">
+            <div className="text lg:text-3xl font-light leading-none tracking-wider font-josefin flex drop-shadow">
               <AnimateIn classes="duration-[2000ms] delay-[1800ms]"><h1>C</h1></AnimateIn>
               <AnimateIn classes="duration-[2000ms] delay-[1825ms]"><h1>e</h1></AnimateIn>
               <AnimateIn classes="duration-[2000ms] delay-[1850ms]"><h1>l</h1></AnimateIn>
