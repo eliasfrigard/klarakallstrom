@@ -2,27 +2,28 @@ import Image from 'next/image'
 
 import AnimateIn from '../components/AnimateIn'
 
-const Hero = ({ children, className, desktopImg, mobileImg, altText, overlay = true }) => {
-  const desktopImageUrl = desktopImg ? desktopImg + '?w=800' : mobileImg + '?w=800'
-  const mobileImageUrl = mobileImg ? mobileImg + '?w=600' : desktopImg + '?w=600'
-
+const Hero = ({ children, className, desktopImg, mobileImg, overlay = true }) => {
   return (
     <AnimateIn className={className}>
       <div id='hero' className='relative h-screen -mt-[75px] flex justify-center items-center shadow-lg'>
         <Image
-          alt={altText}
-          src={desktopImageUrl}
+          alt={desktopImg.altText}
+          src={desktopImg.image + '?w=800'}
           fill
           sizes="(min-width: 768px) 80vw, 100vw"
-          className={`${mobileImg && 'hidden md:block'} object-cover`}
+          className={`hidden md:block object-cover`}
+          placeholder={desktopImg?.blur ? 'blur' : 'empty'}
+          blurDataURL={desktopImg?.blur}
         />
 
         <Image
-          alt={altText}
-          src={mobileImageUrl}
+          alt={mobileImg.altText}
+          src={mobileImg.image + '?w=600'}
           fill
           sizes="(min-width: 768px) 80vw, 100vw"
           className='md:hidden object-cover object-bottom'
+          placeholder={mobileImg?.blur ? 'blur' : 'empty'}
+          blurDataURL={mobileImg?.blur}
         />
 
         {overlay && (

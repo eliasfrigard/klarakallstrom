@@ -4,6 +4,8 @@ import Hero from '../components/Hero'
 import TextLayout from '../components/TextLayout'
 
 import { createClient } from 'contentful'
+import { getPlaiceholder } from 'plaiceholder'
+import { getImageBuffer } from "../util/getImageBuffer"
 
 export async function getStaticProps() {
   const contentful = createClient({
@@ -17,13 +19,27 @@ export async function getStaticProps() {
 
   const page = pageRes.items[0].fields
 
-  const hero = page?.hero ? 'https:' + page?.hero?.fields?.file?.url : null
-  const mobileHero = page?.mobileHero ? 'https:' + page?.mobileHero?.fields?.file?.url : null
+  const heroUrl = 'https:' + page.hero.fields.file.url
+  const mobileHeroUrl = page?.mobileHero ? 'https:' + page?.mobileHero?.fields?.file?.url : heroUrl
+
+  const heroBuffer = await getImageBuffer(heroUrl)
+  const mobileHeroBuffer = await getImageBuffer(mobileHeroUrl)
+
+  const { base64: heroBlur } = await getPlaiceholder(heroBuffer)
+  const { base64: mobileHeroBlur } = await getPlaiceholder(mobileHeroBuffer)
 
   return {
     props: {
-      hero,
-      mobileHero,
+      hero: {
+        altText: page?.hero?.fields?.title,
+        blur: heroBlur,
+        image: heroUrl
+      },
+      mobileHero: {
+        altText: page?.mobileHero ? page?.mobileHero?.fields?.title : page?.hero?.fields?.title,
+        blur: mobileHeroBlur,
+        image: mobileHeroUrl
+      },
       pageTitle: page.title,
       contactInfo: page.contactInformation
     },
@@ -34,13 +50,12 @@ const Contact = ({ hero, mobileHero, pageTitle, contactInfo }) => {
   return (
     <Layout
       pageTitle={pageTitle}
-      pageDescription=""
-      imageUrl={hero}
+      pageDescription="Contact"
+      imageUrl={hero.image}
       pageUrl='/contact'
       footer={false}
     >
       <Hero
-        altText='Contact Klara'
         heroPosition='center'
         desktopImg={hero}
         mobileImg={mobileHero}
